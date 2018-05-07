@@ -4,7 +4,7 @@
 <% for animal in @animals %>
   <p class="name">Name: <%= animal.name() %></p>
   <p class="type">Type: <%= animal.type() %></p>
-  <p class="admission_date">Admission Date <%=animal.admission_date  %>  </p>
+  <p class="admission_date">Admission Date: <%=animal.admission_date  %>  </p>
   <p class="adoptable">Adoptable: <%= animal.adoptable %></p>
 
   <form method="post" action="/animals/<%= animal.id %>/delete">
