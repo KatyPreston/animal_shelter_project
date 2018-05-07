@@ -20,6 +20,17 @@ class Owner
     @id = owner_data[0]["id"].to_i
   end
 
+  def update()
+    sql = "UPDATE owners
+    SET
+    (name) =
+    ($1)
+    WHERE id = $2"
+    values = [@name]
+    SqlRunner.run(sql, values)
+  end
+
+
   def delete()
     sql = "DELETE FROM owners
     WHERE id = $1"
