@@ -1,0 +1,12 @@
+<h2>All the owners!</h2>
+<hr>
+<div>
+<% for animal in @owners %>
+  <p class="name">Name: <%= owner.name() %></p>
+
+  <form method="post" action="/owners/<%= owner.id %>/delete">
+    <input type="submit" value="Delete owner">
+  </form>
+  <hr />
+<%end  %>
+</div>
