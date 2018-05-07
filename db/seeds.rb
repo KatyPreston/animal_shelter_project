@@ -7,17 +7,17 @@ Adoption.delete_all()
 Animal.delete_all()
 Owner.delete_all()
 
-animal1 = Animal.new("name" => "Wolf", "type" => "Dog", "admission_date" => "September 2011", "adoptable" => true)
+animal1 = Animal.new("name" => "Wolf", "type" => "Dog", "admission_date" => "September 2011", "adoptable" => "t")
 
-animal2 = Animal.new("name" => "Bear", "type" => "Dog", "admission_date" => "June 2016", "adoptable" => true)
+animal2 = Animal.new("name" => "Bear", "type" => "Dog", "admission_date" => "June 2016", "adoptable" => "t")
 
-animal3 = Animal.new("name" => "Django", "type" => "Hamster", "admission_date" => "December 2017", "adoptable" => true)
+animal3 = Animal.new("name" => "Django", "type" => "Hamster", "admission_date" => "December 2017", "adoptable" => "t")
 
-animal4 = Animal.new("name" => "Marky Mark", "type" => "Chinchilla", "admission_date" => "May 2018", "adoptable" => false)
+animal4 = Animal.new("name" => "Marky Mark", "type" => "Chinchilla", "admission_date" => "May 2018", "adoptable" => "f")
 
-animal5 = Animal.new("name" => "Beyonce", "type" => "Giant Rabbit", "admission_date" => "April 2018", "adoptable" => true)
+animal5 = Animal.new("name" => "Beyonce", "type" => "Giant Rabbit", "admission_date" => "April 2018", "adoptable" => "t")
 
-animal6 = Animal.new("name" => "Pinky", "type" => "Cat", "admission_date" => "February 2018", "adoptable" => true)
+animal6 = Animal.new("name" => "Pinky", "type" => "Cat", "admission_date" => "February 2018", "adoptable" => "t")
 
 animal1.save()
 animal2.save()

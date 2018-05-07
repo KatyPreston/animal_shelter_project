@@ -1,11 +1,11 @@
 <h2>All the owners!</h2>
 <hr>
-<div class="container">
+<div>
 <% for owner in @owners %>
-  <p class="name">Name: <%= owner.name() %></p>
+  <p>Name: <%= owner.name() %></p>
 
 
-  <form method="post" action="/owners/<%= owner.id %>/delete">
+  <form method="post" action="/owners">
     <input type="submit" value="Delete owner">
   </form>
   <hr />

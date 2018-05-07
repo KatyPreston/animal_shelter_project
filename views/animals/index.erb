@@ -1,14 +1,15 @@
 <h2>All the animals!</h2>
 <hr>
-<div class="container">
+<div>
 <% for animal in @animals %>
-  <p class="name">Name: <%= animal.name() %></p>
-  <p class="type">Type: <%= animal.type() %></p>
-  <p class="admission_date">Admission Date: <%=animal.admission_date  %>  </p>
-  <p class="adoptable">Adoptable: <%= animal.adoptable %></p>
+  <p>Name: <%= animal.name() %></p>
+  <p>Type: <%= animal.type() %></p>
+  <p>Admission Date: <%=animal.admission_date  %>  </p>
+  <p>Adoptable: <%= animal.adoptable %></p>
 
-  <form method="post" action="/animals/<%= animal.id %>/delete">
-    <input type="submit" value="Delete animal">
+
+  <form method="post" action="/animals/<%= animal.id %>/edit">
+    <input type="submit" value="Edit animal">
   </form>
   <hr />
 <%end  %>

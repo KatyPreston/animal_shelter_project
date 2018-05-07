@@ -10,7 +10,7 @@ class Animal
     @name = options["name"]
     @type = options["type"]
     @admission_date = options["admission_date"]
-    @adoptable = options["adoptable"]
+    @adoptable = options["adoptable"] == "t"
   end
 
   def save()
