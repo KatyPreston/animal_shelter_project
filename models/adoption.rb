@@ -20,6 +20,24 @@ class Adoption
     @id = adoption_data[0]["id"].to_i
   end
 
+  def animal()
+    sql = "SELECT *
+    FROM animals
+    WHERE id = $1"
+    values = [@animal_id]
+    animal = SqlRunner.run(sql, values).first
+    return Animal.new(animal)
+  end
+
+  def owner()
+    sql = "SELECT *
+    FROM owners
+    WHERE id = $1"
+    values = [@owner_id]
+    owner = SqlRunner.run(sql, values).first
+    return Owner.new(owner)
+  end
+
   def delete()
     sql = "DELETE FROM adoptions
     WHERE id = $1"

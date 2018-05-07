@@ -4,7 +4,7 @@ require_relative("../models/adoption")
 require_relative("../models/animal")
 require_relative("../models/owner")
 
-class AdoptionTest < Minitest::Test
+class OwnerTest < Minitest::Test
 
   def setup
     @animal1 = Animal.new("name" =>"Monkey", "type" => "Guinea Pig", "admission_date" => "May 2018", "adoptable" => true)
