@@ -7,9 +7,9 @@ require_relative("../models/owner")
 class AnimalTest < Minitest::Test
 
   def setup
-    @animal1 = Animal.new("name" =>"Monkey", "type" => "Guinea Pig", "admission_date" => "May 2018", "adoptable" => "t")
-    @animal2 = Animal.new("name" =>"Edgar", "type" => "Rat", "admission_date" => "April 2018", "adoptable" => "t")
-    @animal3 = Animal.new("name" =>"Monty", "type" => "Cameleon", "admission_date" => "March 2018", "adoptable" => "f")
+    @animal1 = Animal.new("name" =>"Monkey", "type" => "Guinea Pig", "url" => "https://www.petmd.com/sites/default/files/guide-to-guinea-pigs.jpg", "admission_date" => "May 2018", "adoptable" => "t")
+    @animal2 = Animal.new("name" =>"Edgar", "type" => "Rat", "url" => "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fjudystone%2Ffiles%2F2018%2F02%2Fhantavirus-mouse-cdc.jpg", "admission_date" => "April 2018", "adoptable" => "t")
+    @animal3 = Animal.new("name" =>"Monty", "type" => "Chameleon", "url" => "https://i.ytimg.com/vi/-DXpfHNn7V4/maxresdefault.jpg", "admission_date" => "March 2018", "adoptable" => "f")
 
     @owner1 = Owner.new("name" => "Laura")
 

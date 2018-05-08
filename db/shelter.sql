@@ -12,6 +12,7 @@ CREATE TABLE animals (
   id SERIAL4 primary key,
   name VARCHAR(255),
   type VARCHAR(255),
+  url TEXT,
   admission_date VARCHAR(255),
   adoptable BOOLEAN
 );

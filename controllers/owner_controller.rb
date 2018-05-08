@@ -13,11 +13,6 @@ get '/owners/new' do
   erb(:"owners/new")
 end
 
-get '/owners/:id' do
-  @owner = Owner.find(params['id'].to_i)
-  erb(:"owners/show")
-end
-
 get '/owners/:id/edit' do
   @owner = Owner.find(params[:id] )
   erb(:"owners/edit" )
