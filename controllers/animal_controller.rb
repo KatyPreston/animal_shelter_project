@@ -9,6 +9,12 @@ get '/animals' do
   erb ( :"animals/index" )
 end
 
+get '/animals/show_adoptable' do
+  animals = Animal.all
+  @animals = Animal.adoptable_animals(animals)
+  erb ( :"animals/show_adoptable" )
+end
+
 get '/animals/new' do
   @animals = Animal.all
   erb(:"animals/new")
@@ -18,6 +24,7 @@ get '/animals/:id' do
   @animal = Animal.find(params['id'].to_i)
   erb(:"animals/show")
 end
+
 
 # edit
 get '/animals/:id/edit' do
