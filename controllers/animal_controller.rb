@@ -15,6 +15,12 @@ get '/animals/show_adoptable' do
   erb ( :"animals/show_adoptable" )
 end
 
+get '/animals/show_in_care' do
+  animals = Animal.all
+  @animals = Animal.unadoptable(animals)
+  erb ( :"animals/show_in_care" )
+end
+
 get '/animals/new' do
   @animals = Animal.all
   erb(:"animals/new")

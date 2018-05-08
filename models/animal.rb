@@ -83,4 +83,15 @@ class Animal
     return adoptable_animals
   end
 
+  def self.unadoptable(animals)
+    unadoptable_animals = []
+    for animal in animals
+      if
+        animal.adoptable == false
+        unadoptable_animals.push(animal)
+      end
+    end
+    return unadoptable_animals
+  end
+
 end

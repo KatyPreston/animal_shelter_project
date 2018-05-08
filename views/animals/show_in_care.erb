@@ -1,0 +1,20 @@
+<h2>Animals still in Care</h2>
+
+<div>
+<% for animal in @animals %>
+  <p>Name: <%= animal.name() %></p>
+  <p>Type: <%= animal.type() %></p>
+  <p>Admission Date: <%=animal.admission_date  %>  </p>
+  <p>Adoptable: <%= animal.adoptable %></p>
+
+
+
+  <form method="get" action="/animals/<%= animal.id %>/edit">
+    <input type="submit" value="Edit animal">
+  </form>
+  <form action="/animals/<%= animal.id %>/delete" method="post">
+    <input type="submit" value="Delete animal">
+  </form>
+  <hr />
+<%end  %>
+</div>

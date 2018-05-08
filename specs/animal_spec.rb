@@ -9,6 +9,8 @@ class AnimalTest < Minitest::Test
   def setup
     @animal1 = Animal.new("name" =>"Monkey", "type" => "Guinea Pig", "admission_date" => "May 2018", "adoptable" => "t")
     @animal2 = Animal.new("name" =>"Edgar", "type" => "Rat", "admission_date" => "April 2018", "adoptable" => "t")
+    @animal3 = Animal.new("name" =>"Monty", "type" => "Cameleon", "admission_date" => "March 2018", "adoptable" => "f")
+
     @owner1 = Owner.new("name" => "Laura")
 
     @adoption = Adoption.new("animal_id" => @animal1_id, "owner_id" =>@owner1.id)
@@ -33,6 +35,11 @@ class AnimalTest < Minitest::Test
   def test_adoptable_animals
     animals = [@animal1, @animal2]
     assert_equal([@animal1, @animal2], Animal.adoptable_animals(animals))
+  end
+
+  def test_unadoptable_animals
+    animals = [@animal1, @animal2, @animal3]
+    assert_equal([@animal3], Animal.unadoptable(animals))
   end
 
 
