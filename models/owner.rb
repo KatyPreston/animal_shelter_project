@@ -23,10 +23,10 @@ class Owner
   def update()
     sql = "UPDATE owners
     SET
-    (name) =
-    ($1)
+    name =
+    $1
     WHERE id = $2"
-    values = [@name]
+    values = [@name, @id]
     SqlRunner.run(sql, values)
   end
 

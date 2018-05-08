@@ -11,6 +11,9 @@
   <form method="get" action="/animals/<%= animal.id %>/edit">
     <input type="submit" value="Edit animal">
   </form>
+  <form action="/animals/<%= animal.id %>/delete" method="post">
+    <input type="submit" value="Delete animal">
+  </form>
   <hr />
 <%end  %>
 </div>

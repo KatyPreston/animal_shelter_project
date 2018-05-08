@@ -36,7 +36,7 @@ class Animal
       $1, $2, $3, $4
     )
     WHERE id = $5"
-    values = [@name, @type, @admission_date, @adoptable]
+    values = [@name, @type, @admission_date, @adoptable, @id]
     SqlRunner.run(sql, values)
   end
 
