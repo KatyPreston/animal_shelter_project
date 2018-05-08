@@ -8,7 +8,7 @@
   <p>Adoptable: <%= animal.adoptable %></p>
 
 
-  <form method="post" action="/animals/<%= animal.id %>/edit">
+  <form method="get" action="/animals/<%= animal.id %>/edit">
     <input type="submit" value="Edit animal">
   </form>
   <hr />

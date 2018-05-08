@@ -1,5 +1,5 @@
 <form method="post" action="/animals/<%= @animal.id %>">
-  <label for="Name">Name:</label>
+  <label for="name">Name:</label>
   <input
   type="text"
   name="name"
@@ -10,8 +10,8 @@
   <label for="type">Type:</label>
   <input
   type="text"
-  name="name"
-  id="name-field"
+  name="type"
+  id="type"
   value="<%= @animal.type %>"
   />
 
@@ -25,11 +25,11 @@
 
   <label for="adoptable">Adobtable:</label>
   <select name="adoptable" id="adoptable">
-    <option value="t"<%= "selected" if @animal.adoptable == "t" %>
+    <option value="t" <%= "selected" if @animal.adoptable == "t" %>
     >True</option>
-    <option value="f"<%= "selected" if @animal.adoptable == "f" %>
+    <option value="f" <%= "selected" if @animal.adoptable == "f" %>
     >False</option>
   </select>
 
-  <input type='submit' value="Update">
+  <input type="submit" value="Update">
 </form>

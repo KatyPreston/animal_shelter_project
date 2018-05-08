@@ -13,7 +13,7 @@ get '/owners/:id' do
   erb(:"owners/show")
 end
 
-post '/owners/:id/delete' do # delete
+post '/owners/:id/delete' do 
   owner = Owner.find( params[:id] )
   owner.delete()
   redirect to '/owners'
