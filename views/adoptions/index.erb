@@ -3,7 +3,7 @@
   <a href="/adoptions/new">New adoption</a>
 </p>
 <hr>
-<div>
+<div class="position">
 <% for adoption in @adoptions %>
   <p>Animal: <%= adoption.animal.name() %></p>
   <p>Owner: <%= adoption.owner.name() %></p>

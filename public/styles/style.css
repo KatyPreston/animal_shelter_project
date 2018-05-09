@@ -68,3 +68,12 @@ li {
 .buttons {
   display: inline-flex;
 }
+
+img {
+  width: 300px;
+  height:auto;
+}
+
+div.position {
+  text-align: center;
+}
