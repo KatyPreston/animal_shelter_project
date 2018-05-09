@@ -84,5 +84,6 @@ div.register-animal {
 }
 
 div.register-owner{
-  
+  line-height: 100px;
+  padding: 100px;
 }
