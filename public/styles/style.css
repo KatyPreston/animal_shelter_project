@@ -5,7 +5,7 @@ body.home {
 }
 
 body {
-  background-color: #87B7B3
+  background-color: #87B7B3;
 }
 
 
@@ -15,6 +15,10 @@ h1 {
   color: #F68657;
 }
 
+h2 {
+  color: #273D4C;
+  font-size: 1.8em;
+}
 
 ul {
   list-style:none;
@@ -40,15 +44,27 @@ li {
   display: inline;
 }
 
+ .adopt {
+  font-weight: bold;
+}
+
+.navbar {
+  font-weight: normal;
+}
+
 .shelter-animals {
   width: 300px;
   height: auto;
 }
 
-.button-link a {
+.button-link {
   text-decoration: none;
 }
 
 .btn a:visited {
   color: black;
+}
+
+.buttons {
+  display: inline-flex;
 }

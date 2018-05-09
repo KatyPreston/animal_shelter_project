@@ -1,6 +1,6 @@
-<h2>All the animals!</h2>
-<p> <a href="/animals/show_adoptable"> Ready to adopt </a> </p>
-<p> <a href="/animals/show_in_care"> Still in care </a> </p>
+<h2>All our Animals</h2>
+<p> <a class="adopt" href="/animals/show_adoptable"> Ready to adopt </a> </p>
+<p> <a class="adopt" href="/animals/show_in_care"> Still in care </a> </p>
 
 <hr>
 
@@ -15,7 +15,7 @@
   <p>Adopted: <%= animal.adopted %></p>
 
 
-
+<div class="buttons">
   <form method="get" action="/animals/<%= animal.id %>">
     <input type="submit" value="View animal">
   </form>
@@ -25,6 +25,7 @@
   <form action="/animals/<%= animal.id %>/delete" method="post">
     <input type="submit" value="Delete animal">
   </form>
+</div>
   <hr />
 <%end  %>
 </div>

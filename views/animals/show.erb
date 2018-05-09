@@ -7,11 +7,14 @@
   <p>Adopted: <%= @animal.adopted %></p>
 
 
-  <form method="get" action="/animals/<%= @animal.id %>/edit">
-    <input type="submit" value="Edit animal">
-  </form>
-  <form action="/animals/<%= @animal.id %>/delete" method="post">
-    <input type="submit" value="Delete animal">
-  </form>
+  <div class="buttons">
+    <form method="get" action="/animals/<%= @animal.id %>/edit">
+      <input type="submit" value="Edit animal">
+    </form>
+    <form action="/animals/<%= @animal.id %>/delete" method="post">
+      <input type="submit" value="Delete animal">
+    </form>
+  </div>
+
   <hr />
 </div>

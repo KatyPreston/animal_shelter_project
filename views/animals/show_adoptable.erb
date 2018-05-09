@@ -12,13 +12,15 @@
 
   <button type="button" class="btn"><a href="/adoptions/new" class="button-link">Adopt this Animal</a></button>
 
-
+<div class="buttons">
   <form method="get" action="/animals/<%= animal.id  %>/edit">
     <input type="submit" value="Edit animal">
   </form>
   <form action="/animals/<%= animal.id %>/delete" method="post">
     <input type="submit" value="Delete animal">
   </form>
+
+</div>
 
   <hr />
 <%end  %>
