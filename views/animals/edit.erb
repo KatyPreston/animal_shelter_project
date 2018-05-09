@@ -1,50 +1,53 @@
-<form method="post" action="/animals/<%= @animal.id %>">
-  <label for="name">Name:</label>
-  <input
-  type="text"
-  name="name"
-  id="name-field"
-  value="<%= @animal.name %>"
-  />
+<div class="registration">
+  <form method="post" action="/animals/<%= @animal.id %>">
+    <label for="name">Name:</label>
+    <input
+    type="text"
+    name="name"
+    id="name-field"
+    value="<%= @animal.name %>"
+    />
 
-  <label for="type">Type:</label>
-  <input
-  type="text"
-  name="type"
-  id="type"
-  value="<%= @animal.type %>"
-  />
+    <label for="type">Type:</label>
+    <input
+    type="text"
+    name="type"
+    id="type"
+    value="<%= @animal.type %>"
+    />
 
-  <label for="url">Picture:</label>
-  <input
-  type="text"
-  name="url"
-  value=" <%= @animal.url  %>"
-  />
+    <label for="url">Picture:</label>
+    <input
+    type="text"
+    name="url"
+    value=" <%= @animal.url  %>"
+    />
 
-  <label for="admission_date">Admission Date:</label>
-  <input
-  type="text"
-  name="admission_date"
-  id="admission_date"
-  value="<%= @animal.admission_date() %>"
-  />
+    <label for="admission_date">Admission Date:</label>
+    <input
+    type="text"
+    name="admission_date"
+    id="admission_date"
+    value="<%= @animal.admission_date() %>"
+    />
 
-  <label for="adoptable">Adoptable:</label>
-  <select name="adoptable" id="adoptable">
-    <option value="t" <%= "selected" if @animal.adoptable == "t" %>
-    >True</option>
-    <option value="f" <%= "selected" if @animal.adoptable == "f" %>
-    >False</option>
-  </select>
+    <label for="adoptable">Adoptable:</label>
+    <select name="adoptable" id="adoptable">
+      <option value="t" <%= "selected" if @animal.adoptable == "t" %>
+      >True</option>
+      <option value="f" <%= "selected" if @animal.adoptable == "f" %>
+      >False</option>
+    </select>
 
-  <label for="adopted">Adopted:</label>
-  <select name="adopted" id="adopted">
-    <option value="t" <%= "selected" if @animal.adopted == "t" %>
-    >True</option>
-    <option value="f" <%= "selected" if @animal.adopted == "f" %>
-    >False</option>
-  </select>
+    <label for="adopted">Adopted:</label>
+    <select name="adopted" id="adopted">
+      <option value="t" <%= "selected" if @animal.adopted == "t" %>
+      >True</option>
+      <option value="f" <%= "selected" if @animal.adopted == "f" %>
+      >False</option>
+    </select>
 
-  <input type="submit" value="Update">
-</form>
+    <input type="submit" value="Update">
+  </form>
+
+</div>
