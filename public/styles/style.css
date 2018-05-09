@@ -77,3 +77,8 @@ img {
 div.position {
   text-align: center;
 }
+
+.registration {
+  display: block
+  text-align: center;
+}
