@@ -1,33 +1,43 @@
 body.home {
-  background: black url('/images/shelter.jpg');
+  background: white url('/images/animal_family.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
+body {
+  background-color: #87B7B3
+}
+
 
 h1 {
-  line-height: 300px;
-  text-align: center;
+  line-height: 150px;
+  font-size: 2.6em;
   color: #F68657;
 }
 
-h1 span {
-  background-color: white;
-}
 
 ul {
+  list-style:none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
   text-align: center;
-  list-style: none;
-  font-weight: bold;
-  font-size: 1.2em;
 }
 
-nav ul{
-  background-color: #d6ecfa;
-  display: inline-block;
-  padding: 5px;
-  margin-left: 45%;
-  margin-right: auto;
+li a {
+  color: white;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+li {
+  font-size: 1.2em;
+  display: inline;
 }
 
 .shelter-animals {
