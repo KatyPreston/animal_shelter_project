@@ -1,0 +1,7 @@
+<p>Animal: <%= @adoption.animal.name() %></p>
+<p>Owner: <%= @adoption.owner.name() %></p>
+
+
+<form action="/adoptions/<%= @adoption.id %>/delete" method="post">
+  <input type="submit" value="Delete">
+</form>

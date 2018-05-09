@@ -11,13 +11,13 @@ end
 
 get '/animals/show_adoptable' do
   animals = Animal.all
-  @animals = Animal.adoptable_animals(animals)
+  @animals = Animal.ready_for_adoption
   erb ( :"animals/show_adoptable" )
 end
 
 get '/animals/show_in_care' do
   animals = Animal.all
-  @animals = Animal.unadoptable(animals)
+  @animals = Animal.unadoptable
   erb ( :"animals/show_in_care" )
 end
 

@@ -4,6 +4,10 @@
 <% for owner in @owners %>
   <p>Name: <%= owner.name() %></p>
 
+
+  <form action="/owners/ <%= owner.id %>" method="get">
+    <input type="submit" value="View owner">
+  </form>
   <form method="get" action="/owners/<%= owner.id %>/edit">
     <input type="submit" value="Edit owner">
   </form>

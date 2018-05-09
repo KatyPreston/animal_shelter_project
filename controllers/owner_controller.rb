@@ -18,6 +18,11 @@ get '/owners/:id/edit' do
   erb(:"owners/edit" )
 end
 
+get '/owners/:id' do
+  @owner = Owner.find(params[:id])
+  erb(:"owners/show")
+end
+
 post '/owners/:id' do
   owner = Owner.new(params)
   owner.update

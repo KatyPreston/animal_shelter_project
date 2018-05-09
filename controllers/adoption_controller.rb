@@ -18,6 +18,11 @@ get '/adoptions/new' do
 end
 
 get '/adoptions/:id' do
+  @adoption = Adoption.find(params[:id])
+  erb(:"adoptions/show")
+end
+
+get '/adoptions/:id' do
   @adoption = Adoption.find(params['id'].to_i)
   erb(:"adoptions/index")
 end

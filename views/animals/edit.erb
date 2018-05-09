@@ -30,7 +30,7 @@
   value="<%= @animal.admission_date() %>"
   />
 
-  <label for="adoptable">Adobtable:</label>
+  <label for="adoptable">Adoptable:</label>
   <select name="adoptable" id="adoptable">
     <option value="t" <%= "selected" if @animal.adoptable == "t" %>
     >True</option>
@@ -38,7 +38,7 @@
     >False</option>
   </select>
 
-  <label for="adopted">Adobted:</label>
+  <label for="adopted">Adopted:</label>
   <select name="adopted" id="adopted">
     <option value="t" <%= "selected" if @animal.adopted == "t" %>
     >True</option>

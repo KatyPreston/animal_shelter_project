@@ -34,3 +34,11 @@ nav ul{
   width: 300px;
   height: auto;
 }
+
+.button-link a {
+  text-decoration: none;
+}
+
+.btn a:visited {
+  color: black;
+}
