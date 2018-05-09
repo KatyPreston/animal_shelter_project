@@ -1,11 +1,14 @@
 <div>
   <p>Name: <%= @owner.name() %></p>
 
-  <form method="get" action="/owners/<%= @owner.id %>/edit">
-    <input type="submit" value="Edit">
-  </form>
-  <form action="/owners/<%= @owner.id %>/delete" method="post">
-    <input type="submit" value="Delete">
-  </form>
+  <div class="buttons">
+    <form method="get" action="/owners/<%= @owner.id %>/edit">
+      <input type="submit" value="Edit">
+    </form>
+    <form action="/owners/<%= @owner.id %>/delete" method="post">
+      <input type="submit" value="Delete">
+    </form>
+  </div>
+
   <hr />
 </div>
