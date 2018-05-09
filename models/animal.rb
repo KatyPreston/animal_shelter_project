@@ -51,6 +51,10 @@ class Animal
     SqlRunner.run(sql, values)
   end
 
+  def get_adopted
+    @adopted = true
+  end
+
   def self.delete_all()
     sql = "DELETE FROM animals"
     SqlRunner.run( sql )

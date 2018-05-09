@@ -32,6 +32,10 @@ class AnimalTest < Minitest::Test
     assert_equal(true, @animal1.adoptable)
   end
 
+  def test_adopted
+    assert_equal(false, @animal2.adopted)
+  end
+
   def test_adoptable_animals
     animals = [@animal1, @animal2]
     assert_equal([@animal1, @animal2], Animal.adoptable_animals(animals))
@@ -40,6 +44,11 @@ class AnimalTest < Minitest::Test
   def test_unadoptable_animals
     animals = [@animal1, @animal2, @animal3]
     assert_equal([@animal3], Animal.unadoptable(animals))
+  end
+
+  def test_get_adopted
+    @animal1.get_adopted
+    assert_equal(true, @animal1.adopted)
   end
 
 
