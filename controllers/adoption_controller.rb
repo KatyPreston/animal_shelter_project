@@ -12,7 +12,7 @@ end
 
 get '/adoptions/new' do
   animals = Animal.all
-  @animals = Animal.adoptable_animals(animals)
+  @animals = Animal.ready_for_adoption()
   @owners = Owner.all
   erb(:"adoptions/new")
 end
@@ -24,7 +24,10 @@ end
 
 post '/adoptions' do
   adoption = Adoption.new(params)
-  adoption.save
+  adoption.save()
+  animal = Animal.find(adoption.animal_id)
+  animal.get_adopted
+  animal.update
   redirect to("/adoptions")
 end
 

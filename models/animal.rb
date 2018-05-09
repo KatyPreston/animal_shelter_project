@@ -51,7 +51,7 @@ class Animal
     SqlRunner.run(sql, values)
   end
 
-  def get_adopted
+  def get_adopted()
     @adopted = true
   end
 
@@ -80,26 +80,18 @@ class Animal
     return animal
   end
 
-  def self.adoptable_animals(animals)
-    adoptable_animals = []
-    for animal in animals
-      if
-        animal.adoptable == true
-        adoptable_animals.push(animal)
-      end
-    end
-    return adoptable_animals
+  def self.ready_for_adoption
+    sql = "SELECT * FROM animals WHERE adoptable = 't' AND adopted = 'f'"
+    animal_data = SqlRunner.run(sql)
+    animals = map_items(animal_data)
+    return animals
   end
 
-  def self.unadoptable(animals)
-    unadoptable_animals = []
-    for animal in animals
-      if
-        animal.adoptable == false
-        unadoptable_animals.push(animal)
-      end
-    end
-    return unadoptable_animals
+  def self.unadoptable
+    sql = "SELECT * FROM animals WHERE adoptable = 'f'"
+    animal_data = SqlRunner.run(sql)
+    animals = map_items(animal_data)
+    return animals
   end
 
 end
