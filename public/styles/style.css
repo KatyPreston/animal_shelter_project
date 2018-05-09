@@ -87,3 +87,8 @@ div.register-owner{
   line-height: 100px;
   padding: 100px;
 }
+
+div.edit {
+  line-height: 200px;
+  padding: 50px;
+}
