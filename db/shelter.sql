@@ -14,7 +14,8 @@ CREATE TABLE animals (
   type VARCHAR(255),
   url TEXT,
   admission_date VARCHAR(255),
-  adoptable BOOLEAN
+  adoptable BOOLEAN,
+  adopted BOOLEAN
 );
 
 CREATE TABLE adoptions (

@@ -15,6 +15,13 @@
   value="<%= @animal.type %>"
   />
 
+  <label for="url">Picture:</label>
+  <input
+  type="text"
+  name="url"
+  value=" <%= @animal.url  %>"
+  />
+
   <label for="admission_date">Admission Date:</label>
   <input
   type="text"
@@ -28,6 +35,14 @@
     <option value="t" <%= "selected" if @animal.adoptable == "t" %>
     >True</option>
     <option value="f" <%= "selected" if @animal.adoptable == "f" %>
+    >False</option>
+  </select>
+
+  <label for="adopted">Adobted:</label>
+  <select name="adopted" id="adopted">
+    <option value="t" <%= "selected" if @animal.adopted == "t" %>
+    >True</option>
+    <option value="f" <%= "selected" if @animal.adopted == "f" %>
     >False</option>
   </select>
 

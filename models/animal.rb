@@ -3,7 +3,7 @@ require_relative("../db/sql_runner")
 class Animal
 
   attr_reader(:id)
-  attr_accessor(:name, :type, :url, :admission_date, :adoptable)
+  attr_accessor(:name, :type, :url, :admission_date, :adoptable, :adopted)
 
   def initialize(options)
     @id = options["id"].to_i
@@ -12,14 +12,15 @@ class Animal
     @url = options["url"]
     @admission_date = options["admission_date"]
     @adoptable = options["adoptable"] == "t"
+    @adopted = options["adopted"] == "t"
   end
 
   def save()
     sql = "INSERT into animals
-    (name, type, url, admission_date, adoptable)
-    VALUES ($1, $2, $3, $4, $5)
+    (name, type, url, admission_date, adoptable, adopted)
+    VALUES ($1, $2, $3, $4, $5, $6)
     RETURNING *"
-    values = [@name, @type, @url, @admission_date, @adoptable]
+    values = [@name, @type, @url, @admission_date, @adoptable, @adopted]
     animal_data = SqlRunner.run(sql, values)
     @id = animal_data[0]["id"].to_i
   end
@@ -32,13 +33,14 @@ class Animal
       type,
       url,
       admission_date,
-      adoptable
+      adoptable,
+      adopted
     ) =
     (
-      $1, $2, $3, $4, $5
+      $1, $2, $3, $4, $5, $6
     )
-    WHERE id = $6"
-    values = [@name, @type, @url, @admission_date, @adoptable, @id]
+    WHERE id = $7"
+    values = [@name, @type, @url, @admission_date, @adoptable, @adopted, @id]
     SqlRunner.run(sql, values)
   end
 
