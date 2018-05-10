@@ -18,30 +18,30 @@ class AnimalTest < Minitest::Test
     @adoption = Adoption.new("animal_id" => @animal1_id, "owner_id" =>@owner1.id)
   end
 
-  def test_animal_name
-    assert_equal("Monkey", @animal1.name)
+  def test_animal_name()
+    assert_equal("Monkey", @animal1.name())
   end
 
-  def test_animal_type
-    assert_equal("Guinea Pig", @animal1.type)
+  def test_animal_type()
+    assert_equal("Guinea Pig", @animal1.type())
   end
 
-  def test_admission_date
-    assert_equal("May 2018", @animal1.admission_date)
+  def test_admission_date()
+    assert_equal("May 2018", @animal1.admission_date())
   end
 
-  def test_adoptable
-    assert_equal(true, @animal1.adoptable)
+  def test_adoptable()
+    assert_equal(true, @animal1.adoptable())
   end
 
-  def test_adopted
-    assert_equal(false, @animal2.adopted)
+  def test_adopted()
+    assert_equal(false, @animal2.adopted())
   end
 
 
-  def test_get_adopted
-    @animal1.get_adopted
-    assert_equal(true, @animal1.adopted)
+  def test_get_adopted()
+    @animal1.get_adopted()
+    assert_equal(true, @animal1.adopted())
   end
 
 

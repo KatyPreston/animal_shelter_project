@@ -47,7 +47,7 @@ class Adoption
 
   def self.delete_all()
     sql = "DELETE FROM adoptions"
-    SqlRunner.run( sql )
+    SqlRunner.run(sql)
   end
 
   def self.all()

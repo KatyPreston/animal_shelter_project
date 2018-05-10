@@ -80,14 +80,14 @@ class Animal
     return animal
   end
 
-  def self.ready_for_adoption
+  def self.ready_for_adoption()
     sql = "SELECT * FROM animals WHERE adoptable = 't' AND adopted = 'f'"
     animal_data = SqlRunner.run(sql)
     animals = map_items(animal_data)
     return animals
   end
 
-  def self.unadoptable
+  def self.unadoptable()
     sql = "SELECT * FROM animals WHERE adoptable = 'f'"
     animal_data = SqlRunner.run(sql)
     animals = map_items(animal_data)

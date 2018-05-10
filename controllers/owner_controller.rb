@@ -5,17 +5,17 @@ require_relative("../models/owner")
 
 get '/owners' do
   @owners = Owner.all()
-  erb ( :"owners/index" )
+  erb (:"owners/index")
 end
 
 get '/owners/new' do
-  @owners = Owner.all
+  @owners = Owner.all()
   erb(:"owners/new")
 end
 
 get '/owners/:id/edit' do
   @owner = Owner.find(params[:id] )
-  erb(:"owners/edit" )
+  erb(:"owners/edit")
 end
 
 get '/owners/:id' do
@@ -25,18 +25,18 @@ end
 
 post '/owners/:id' do
   owner = Owner.new(params)
-  owner.update
+  owner.update()
   redirect to '/owners'
 end
 
 post '/owners' do
   owner = Owner.new(params)
-  owner.save
+  owner.save()
   redirect to("/owners")
 end
 
 post '/owners/:id/delete' do
-  owner = Owner.find( params[:id] )
+  owner = Owner.find(params[:id] )
   owner.delete()
   redirect to '/owners'
 end
