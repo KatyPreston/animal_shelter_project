@@ -5,7 +5,7 @@ require_relative("../models/owner")
 
 get '/owners' do
   @owners = Owner.all()
-  erb (:"owners/index")
+  erb(:"owners/index")
 end
 
 get '/owners/new' do
@@ -25,7 +25,7 @@ end
 post '/owners/:id' do
   owner = Owner.new(params)
   owner.update()
-  redirect to '/owners'
+  redirect to ("/owners")
 end
 
 post '/owners' do
@@ -37,5 +37,5 @@ end
 post '/owners/:id/delete' do
   owner = Owner.find(params[:id] )
   owner.delete()
-  redirect to '/owners'
+  redirect to ("/owners")
 end

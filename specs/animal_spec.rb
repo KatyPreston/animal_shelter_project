@@ -38,7 +38,6 @@ class AnimalTest < Minitest::Test
     assert_equal(false, @animal2.adopted())
   end
 
-
   def test_get_adopted()
     @animal1.get_adopted()
     assert_equal(true, @animal1.adopted())

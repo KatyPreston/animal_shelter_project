@@ -30,7 +30,7 @@ end
 
 post '/animals/:id' do
   animal = Animal.new(params).update()
-  redirect to '/animals'
+  redirect to ("/animals")
 end
 
 get '/animals/:id' do
@@ -47,5 +47,5 @@ end
 post '/animals/:id/delete' do
   animal = Animal.find( params[:id] )
   animal.delete()
-  redirect to '/animals'
+  redirect to ("/animals")
 end
