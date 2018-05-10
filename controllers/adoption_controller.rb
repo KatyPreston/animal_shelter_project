@@ -11,7 +11,6 @@ get '/adoptions' do
 end
 
 get '/adoptions/new' do
-  animals = Animal.all()
   @animals = Animal.ready_for_adoption()
   @owners = Owner.all()
   erb(:"adoptions/new")
@@ -20,11 +19,6 @@ end
 get '/adoptions/:id' do
   @adoption = Adoption.find(params[:id])
   erb(:"adoptions/show")
-end
-
-get '/adoptions/:id' do
-  @adoption = Adoption.find(params['id'].to_i)
-  erb(:"adoptions/index")
 end
 
 post '/adoptions' do

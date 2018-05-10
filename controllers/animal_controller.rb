@@ -6,23 +6,20 @@ require_relative("../models/animal")
 
 get '/animals' do
   @animals = Animal.all()
-  erb (:"animals/index")
+  erb(:"animals/index")
 end
 
 get '/animals/show_adoptable' do
-  animals = Animal.all()
   @animals = Animal.ready_for_adoption()
-  erb (:"animals/show_adoptable")
+  erb(:"animals/show_adoptable")
 end
 
 get '/animals/show_in_care' do
-  animals = Animal.all()
   @animals = Animal.unadoptable()
-  erb (:"animals/show_in_care")
+  erb(:"animals/show_in_care")
 end
 
 get '/animals/new' do
-  @animals = Animal.all()
   erb(:"animals/new")
 end
 

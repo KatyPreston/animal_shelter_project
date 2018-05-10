@@ -33,17 +33,17 @@
 
     <label for="adoptable">Adoptable:</label>
     <select name="adoptable" id="adoptable">
-      <option value="t" <%= "selected" if @animal.adoptable == "t" %>
+      <option value="t" <%= "selected" if @animal.adoptable %>
       >True</option>
-      <option value="f" <%= "selected" if @animal.adoptable == "f" %>
+      <option value="f" <%= "selected" if !@animal.adoptable %>
       >False</option>
     </select>
 
     <label for="adopted">Adopted:</label>
     <select name="adopted" id="adopted">
-      <option value="t" <%= "selected" if @animal.adopted == "t" %>
+      <option value="t" <%= "selected" if @animal.adopted %>
       >True</option>
-      <option value="f" <%= "selected" if @animal.adopted == "f" %>
+      <option value="f" <%= "selected" if !@animal.adopted %>
       >False</option>
     </select>
 
