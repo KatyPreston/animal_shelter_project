@@ -1,5 +1,7 @@
 # animal_shelter_project
 Ruby/Sinatra/PostgreSQL project (week 5 CodeClan Course)
+- CRUD web application
+- RESTful routes
 
 database name = shelter
 
