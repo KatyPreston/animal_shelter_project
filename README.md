@@ -1,9 +1,20 @@
 # animal_shelter_project
-Ruby/Sinatra/PostgreSQL project (week 5 CodeClan Course)
+Ruby/Sinatra/PostgreSQL project Homeward Bound Animal Shelter(week 5 CodeClan Course): A management system to keep track of animals and owners for an animal shelter.
 - CRUD web application
 - RESTful routes
 
 database name = shelter
+
+Users are able to:
+- get a list of all the animals and their date of admission
+- get a list of all the prospective owners
+- mark an animal as being adoptable or not ready for adoption
+- assign an animal to a new owner
+- get a list of all the successful adoptions
+
+- there are separate views for adoptable animals and animals not ready for adoption
+- delete animals, owners, adoptions       
+- edit owner 
 
 Things I would modify:
 - When delete an adoption, update the animal adopted to false again
